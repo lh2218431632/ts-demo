@@ -54,4 +54,6 @@ linkedList.push(student2);
 linkedList.push(student3);
 linkedList.insert(student4,2);
 console.log(linkedList.indexOf(student3));
+linkedList.removeAt(2);
+console.log(linkedList);
 
