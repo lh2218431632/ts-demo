@@ -1,0 +1,48 @@
+{
+  /*
+  tsconfig.json 是ts编译器的配置文件，ts编译器可以根据它进行编译
+  */
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "es6",
+    "target": "es6",
+//    "sourceMap": true,
+    //用来指定ts编译器编译后的目录
+//    "outDir": "./dist",
+    //将所有ts文件打包成一个js文件
+//    "outFile": "./dist/index.js"
+    //是否允许编译js文件
+    //"allowJs": false
+    //是否检查js文件符文ts的语法规范
+    //"checkJs": false
+    //是否移除注释
+//    "removeComments": false,
+    //不生成编译文件
+//    "noEmit": false,
+    //如果ts文件有错误，就不会编译，避免出现有安全问题的代码出现在编译后的文件里
+//    "noEmitOnError": false,
+    //编译后的js文件是否开启严格模式，严格模式的js代码性能更好一些
+//    "alwaysStrict": false,
+    //不允许隐式的any类型
+//    "noImplicitAny": false,
+//    "noImplicitThis": false,
+    //严格检查空值
+//    "strictNullChecks": false,
+    //严格总开关
+    "strict": false,
+    "experimentalDecorators" : true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  /*
+  路径： **表示任意目录
+        *表示任意文件
+  *
+  */
+
+//  "include": [
+//    "./ts/**/*"
+//  ]
+
+}
