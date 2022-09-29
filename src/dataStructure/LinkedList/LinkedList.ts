@@ -1,7 +1,7 @@
 import LNode from "./Node";
 
 class LinkedList<T> {
-   private count: number;
+    protected count: number;
     head: LNode<T>;
     compared: Function;
 
@@ -117,6 +117,13 @@ class LinkedList<T> {
             this.count --;
             return true;
         }
+    }
+    getAll(node: LNode<T>): void {
+        if(node === null) {
+            return;
+        }
+        this.getAll(node.next);
+        console.log(node.element);
     }
     get size()  {
         return this.count;

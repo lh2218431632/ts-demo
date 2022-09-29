@@ -3,7 +3,7 @@ class LNode<T> {
    public  next : LNode<T> ;
     constructor(element: T) {
         this.element = element;
-        this.next = null;
+        this.next = undefined;
     }
 }
 

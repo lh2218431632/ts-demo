@@ -4,6 +4,7 @@ import Phone from "./Decorator/basis";
 import Factory from "./DesignMode/简单工厂模式";
 import {WaterMelonFactory,AppleFactory} from "./DesignMode/工厂方法模式";
 import LinkedList from "./dataStructure/LinkedList/LinkedList";
+import DoubleLinkedList from "./dataStructure/DoubleLinkedList/DoubleLinkedList";
 
 function  add (a: number, b: number) :number {
     return a + b;
@@ -45,15 +46,13 @@ let apple1 = AppleFactory.create();
 console.log(apple1);
 let w = WaterMelonFactory.create();
 console.log(w);
+let DoubleListLined = new DoubleLinkedList<Student>(comparedStudent);
+DoubleListLined.push(student);
+DoubleListLined.push(student1);
+DoubleListLined.push(student2);
+DoubleListLined.push(student3);
+DoubleListLined.insert(student4,1)
+console.log(DoubleListLined);
 
-let linkedList = new LinkedList<Student>(comparedStudent);
 
-linkedList.push(student);
-linkedList.push(student1);
-linkedList.push(student2);
-linkedList.push(student3);
-linkedList.insert(student4,2);
-console.log(linkedList.indexOf(student3));
-linkedList.removeAt(2);
-console.log(linkedList);
 
