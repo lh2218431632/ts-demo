@@ -36,7 +36,6 @@ export  class AppleFactory  {
      static create(): Plant {
         return new Apple('苹果','甜');
     }
-
 }
 
 export class  WaterMelonFactory {

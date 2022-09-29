@@ -5,6 +5,7 @@ import Factory from "./DesignMode/简单工厂模式";
 import {WaterMelonFactory,AppleFactory} from "./DesignMode/工厂方法模式";
 import LinkedList from "./dataStructure/LinkedList/LinkedList";
 import DoubleLinkedList from "./dataStructure/DoubleLinkedList/DoubleLinkedList";
+import MyWindow from "./DesignMode/单例模式";
 
 function  add (a: number, b: number) :number {
     return a + b;
@@ -54,5 +55,32 @@ DoubleListLined.push(student3);
 DoubleListLined.insert(student4,1)
 console.log(DoubleListLined);
 
+let myWindow  = MyWindow.getInstance();
+let myWindow2 = MyWindow.getInstance();
 
+let testCount: number = 0 ;
+1
+function addTestCount() :void {
+    testCount++;
+}
+addTestCount();
+addTestCount();
+addTestCount();
 
+let My = (function(){
+    let window;
+    return function My (name: string):void {
+        if(window) {
+            return window;
+        }
+        else {
+            this.name = name;
+            return (window = this);
+        }
+    }
+})()
+
+let my1 =new My('林浩');
+let my2 =new My('林浩');
+
+console.log(my1 === my2)
